@@ -51,7 +51,14 @@ def delete_note():
     note.delete_instance()
     print(f'Note "{title}" deleted successfully')
     
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Notepad application')
     parser.add_argument('command', choices=['create', 'list', 'get', 'update_title', 'update_content', 'delete'])
     args = parser.parse_args()
+
+
+
+if args.command == 'create':
+        create_note()
