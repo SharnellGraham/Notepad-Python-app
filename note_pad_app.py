@@ -71,3 +71,6 @@ elif args.command == 'get':
 
 elif args.command == 'update_title':
         update_title()
+
+elif args.command == 'update_content':
+        update_content()        
