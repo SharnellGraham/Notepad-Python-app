@@ -1,23 +1,27 @@
+
 import argparse
 from note_model import NoteModel
 from peewee_notes_model import create_tables, seed_data
 
-reate_tables()
+# Initialize the database
+create_tables()
 seed_data()
 
+
+# Create note
 def create_note():
     title = input("Enter note title: ")
     content = input("Enter note content: ")
     note = NoteModel.create(title=title, content=content)
     print(f'Note "{note.title}" created successfully!')
 
-
+# List notes
 def list_notes():
     notes = NoteModel.select()
     for note in notes:
      print(f'{note.title} - {note.content}')
 
-
+# Get note by title
 def get_note():
     title = input("Enter note title: ")
     try:
@@ -26,7 +30,7 @@ def get_note():
     except NoteModel.DoesNotExist:
         print(f'Note with title "{title}" does not exist.')
 
-
+# Update notes title
 def update_title():
     old_title = input("Enter current note title: ")
     new_title = input("Enter new note title: ")
@@ -35,7 +39,7 @@ def update_title():
     note.save()
     print(f'Note title updated to "{new_title}"')
 
-
+# Update notes content 
 def update_content():
     title = input("Enter note title: ")
     content = input("Enter new note content: ")
@@ -44,7 +48,7 @@ def update_content():
     note.save()
     print(f'Note content updated')
 
-
+# Delete note by title 
 def delete_note():
     title = input("Enter note title: ")
     note = NoteModel.get(NoteModel.title == title)
