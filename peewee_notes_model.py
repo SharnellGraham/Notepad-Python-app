@@ -17,3 +17,13 @@ class NoteModel(Model):
 db.create_tables([NoteModel])
 with db: 
         db.create_tables([NoteModel])
+
+def seed_data():
+     notes = [
+          
+        {'title': 'Note 1', 'content': 'Content goes here. '},
+        {'title': 'Note 2', 'content': 'Content goes here. '},
+        {'title': 'Note 3', 'content': 'Content goes here. '}
+     ]
+
+     
