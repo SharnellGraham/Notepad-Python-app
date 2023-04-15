@@ -13,3 +13,5 @@ class NoteModel(Model):
 
     class Meta:
         database = db
+ # create the NoteModel table in the notes.db database
+db.create_tables([NoteModel])
