@@ -1,7 +1,6 @@
 
 import argparse
-from note_model import NoteModel
-from peewee_notes_model import create_tables, seed_data
+from peewee_notes_model import NoteModel, create_tables, seed_data
 
 # Initialize the database
 create_tables()
