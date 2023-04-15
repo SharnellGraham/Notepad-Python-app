@@ -15,3 +15,12 @@ def list_notes():
     notes = NoteModel.select()
     for note in notes:
      print(f'{note.title} - {note.content}')
+
+def get_note():
+    title = input("Enter note title: ")
+    try:
+        note = NoteModel.get(NoteModel.title == title)
+        print(f'{note.title} - {note.content}')
+    except NoteModel.DoesNotExist:
+        print(f'Note with title "{title}" does not exist.')
+
