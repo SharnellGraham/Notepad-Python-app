@@ -65,3 +65,6 @@ if args.command == 'create':
     
 elif args.command == 'list':
         list_notes()
+
+elif args.command == 'get':
+        get_note()
