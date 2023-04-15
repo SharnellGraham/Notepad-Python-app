@@ -35,3 +35,19 @@ def update_title():
     note.save()
     print(f'Note title updated to "{new_title}"')
 
+
+def update_content():
+    title = input("Enter note title: ")
+    content = input("Enter new note content: ")
+    note = NoteModel.get(NoteModel.title == title)
+    note.content = content
+    note.save()
+    print(f'Note content updated')
+    
+
+def delete_note():
+    title = input("Enter note title: ")
+    note = NoteModel.get(NoteModel.title == title)
+    note.delete_instance()
+    print(f'Note "{title}" deleted successfully')
+    
