@@ -68,3 +68,6 @@ elif args.command == 'list':
 
 elif args.command == 'get':
         get_note()
+
+elif args.command == 'update_title':
+        update_title()
