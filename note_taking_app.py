@@ -10,3 +10,8 @@ def create_note():
     content = input("Enter note content: ")
     note = NoteModel.create(title=title, content=content)
     print(f'Note "{note.title}" created successfully!')
+
+def list_notes():
+    notes = NoteModel.select()
+    for note in notes:
+     print(f'{note.title} - {note.content}')
