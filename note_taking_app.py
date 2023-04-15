@@ -4,3 +4,7 @@ from peewee_notes_model import create_tables, seed_data
 
 reate_tables()
 seed_data()
+
+def create_note():
+    title = input("Enter note title: ")
+    content = input("Enter note content: ")
