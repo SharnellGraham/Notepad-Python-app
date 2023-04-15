@@ -26,4 +26,6 @@ def seed_data():
         {'title': 'Note 3', 'content': 'Content goes here. '}
      ]
 
-     
+     with db.atomic():
+          for note in notes:
+               NoteModel.create(**note)
