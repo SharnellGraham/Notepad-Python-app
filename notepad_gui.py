@@ -8,3 +8,8 @@ layout = [
 
 
 window = sg.Window('Notepad App', layout)
+
+
+while True:
+    event, values = window.Read()
+    
