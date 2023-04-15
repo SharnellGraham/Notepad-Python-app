@@ -74,3 +74,6 @@ elif args.command == 'update_title':
 
 elif args.command == 'update_content':
         update_content()        
+
+elif args.command == 'delete':
+        delete_note()
