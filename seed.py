@@ -9,3 +9,9 @@ def create_tables():
     # create the tables in the database
     with db:
         db.create_tables([NoteModel])
+
+
+def seed_data():
+    # seed the database with some data 
+    NoteModel.create(title='First note', content='This is my first note')
+    NoteModel.create(title='Second note', content='This is my second note')
