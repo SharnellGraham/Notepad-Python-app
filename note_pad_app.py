@@ -62,3 +62,6 @@ if __name__ == '__main__':
 
 if args.command == 'create':
         create_note()
+    
+elif args.command == 'list':
+        list_notes()
